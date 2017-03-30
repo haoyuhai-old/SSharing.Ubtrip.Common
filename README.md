@@ -2,20 +2,19 @@
 包含C#开发中常用的一些工具类，主要内容是数据访问框架。
 
 数据库访问扩展功能使用简介：
-//待完成功能：
-单表继承实现方式的支持;
-上下文事务的嵌套(即在原事务中开启新的事务);
-存储过程的支持;
-Oracle的支持;
 
 原有功能：基于配置的Sql模板生成实际执行的Sql脚本
 
 操作示例：
+
 DbMgr db = new DbMgr();
+
 //不返回结果
+
 ExecuteNonQuery("$Employee_Update", null, param1, param2);
 
 //返回查询结果
+
 PageList<Employee> pageList = 
     db.ExecutePageListObject<Employee>("$Employee_Select", "OrderKey", pageSize, curPage, param1);
 
@@ -25,7 +24,7 @@ PageList<Employee> pageList =
 映射示例
  
     //标记对应的表或视图
-    //可以使用$/ubtrip/技术研究/CodeFactory自动生成
+    //可以使用工具自动生成
     [Table("dbo.employee")] 
     class Employee
     {
@@ -45,7 +44,9 @@ PageList<Employee> pageList =
     }
 
 操作简介
+
 .Insert
+
     Employee emp = new Employee();
     emp.Code = "1001";
     //...
@@ -55,6 +56,7 @@ PageList<Employee> pageList =
     DbService.Insert(emp);
 
 .Update
+
     Employee emp = DbService.Get<Employee>(100);
     emp.Code = "2008";
     //...
@@ -72,20 +74,26 @@ PageList<Employee> pageList =
     DbService.Update(emp);  //将抛出异常！
 
 .Delete
+
     //删除id为100的记录
     //sql: DELETE FROM dbo.employee WHERE emp_id = 100;
     DbService.Delete<Employee>(100);
 
 .Get
+
     //获取主键为100的记录
     //sql: SELECT * FROM dbo.employee WHERE emp_id = 100;
+
     Employee emp = DbService.Get<Employee>(100);
 
     //获取Code为'1001'的记录,如果结果多于一条，将抛出异常！
+
     //sql: SELECT * FROM dbo.employee WHERE emp_code = '1001';
+
     Employee emp = DbService.GetUnique<Employee>(x => x.Code, Operator.Eq, "1001");
 
 .GetList
+
     //获取Code大于'1001', 名称包含'王'的所有记录
     //sql: SELECT * FROM dbo.employee WHERE emp_code > '1001' AND emp_name like '%王%';
 
@@ -117,6 +125,7 @@ PageList<Employee> pageList =
     DbService.GetMultiList<Employee, Order>(filter1, filter2, out employees, out orders);
 
 .事务
+
     TransactionScope类的使用
     1. ts.Complete()必须是using语句块的最后一条语句
     2. using语句块内如果发生数据库相关的异常，必须向外抛出
@@ -135,6 +144,7 @@ PageList<Employee> pageList =
     }
 
 总结：
+
     数据访问层的扩展功能：
     优点: 减少配置的Sql语句，操作更方便, 工作量更少, 容易维护
     缺点：灵活性不够, 不支持数据库中的函数，存储过程等，而且只支持单表或视图

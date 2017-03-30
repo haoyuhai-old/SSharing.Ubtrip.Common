@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E283D16-D685-4A71-822D-52BFFB2DCCB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSharing.Ubtrip.Common</RootNamespace>
+    <AssemblyName>SSharing.Ubtrip.Common</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>http://localhost/SSharing.Ubtrip.Common/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\Ubtrip.External-bin\ubtrip.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=6.10.4.1, Culture=neutral, PublicKeyToken=4735ae9824c7d3ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Ciloci.Flee, Version=0.9.26.0, Culture=neutral, PublicKeyToken=c8526a021ef298ed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Ciloci.Flee.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetTextBox, Version=3.5.0.0, Culture=neutral, PublicKeyToken=4577255b0d2d7147, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\DotNetTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.4.23264, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=1.0.3.3, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="Cache\CacheManagerName.cs" />
+    <Compile Include="Cache\ICacheManager.cs" />
+    <Compile Include="Cache\ObjectCache.cs" />
+    <Compile Include="Cache\ObjectDynamicCache.cs" />
+    <Compile Include="Cache\ObjectListCache.cs" />
+    <Compile Include="Cache\ObjectListDynamicCache.cs" />
+    <Compile Include="Cache\SingletonBase.cs" />
+    <Compile Include="Cache\SqlDependency\ObjectListSqlDependencyCache.cs" />
+    <Compile Include="Cache\SqlDependency\ObjectSqlDependencyCache.cs" />
+    <Compile Include="Cache\SqlDependency\SqlDependencyCacheItemExpiration.cs" />
+    <Compile Include="Common\AddOrModify.cs" />
+    <Compile Include="Common\BaseEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\BasePage.cs" />
+    <Compile Include="Common\IPage.cs" />
+    <Compile Include="Common\ITextValue.cs" />
+    <Compile Include="Common\LocationType.cs" />
+    <Compile Include="Common\MessageEventArgs.cs" />
+    <Compile Include="Common\MethodResult.cs" />
+    <Compile Include="Common\NameValueList.cs" />
+    <Compile Include="Common\PageList.cs" />
+    <Compile Include="Common\PageTable.cs" />
+    <Compile Include="Common\PropertySorter.cs" />
+    <Compile Include="Common\UbtripListItem.cs" />
+    <Compile Include="ConfigSections\JobsConfigurationSection.cs" />
+    <Compile Include="Helper\ConfigHelper.cs" />
+    <Compile Include="Helper\UbtripHelper.cs" />
+    <Compile Include="Sql\DbManager\AutoParameterDbInstance.cs" />
+    <Compile Include="Sql\DbManager\DataAccessContext.cs" />
+    <Compile Include="Sql\DbManager\DbInstance.cs" />
+    <Compile Include="Sql\DbManager\DbInstanceType.cs" />
+    <Compile Include="Sql\DbManager\DbManager.cs" />
+    <Compile Include="Sql\DbManager\DbRefCursor.cs" />
+    <Compile Include="Sql\DbManager\SqlMapper.cs" />
+    <Compile Include="Extentions\DropDownListExtension.cs" />
+    <Compile Include="Extentions\EnumExtension.cs" />
+    <Compile Include="Extentions\ICommunicationObjectExtension.cs" />
+    <Compile Include="Extentions\IEnumerableExtension.cs" />
+    <Compile Include="Extentions\ObjectExtension.cs" />
+    <Compile Include="Extentions\StringExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContext\IContextContainer.cs" />
+    <Compile Include="ServiceContext\ServiceContext.cs" />
+    <Compile Include="ServiceContext\UserInfo.cs" />
+    <Compile Include="ServiceContext\WebContextContainer.cs" />
+    <Compile Include="ServiceContext\WindowContextContainer.cs" />
+    <Compile Include="Services\EmptyRequest.cs" />
+    <Compile Include="Services\EmptyResponse.cs" />
+    <Compile Include="Services\PerformanceRecord.cs" />
+    <Compile Include="Services\Request.cs" />
+    <Compile Include="Services\RequestHead.cs" />
+    <Compile Include="Services\Response.cs" />
+    <Compile Include="Services\ResponseHead.cs" />
+    <Compile Include="Services\ServiceHelper.cs" />
+    <Compile Include="Sql\BaseSql.cs" />
+    <Compile Include="Sql\DbMgr.cs" />
+    <Compile Include="Sql\DynamicMethodExecutor.cs" />
+    <Compile Include="Sql\DynamicPropertyAccessor.cs" />
+    <Compile Include="Sql\EnumMetaDataCacheManager.cs" />
+    <Compile Include="Sql\Filter.cs" />
+    <Compile Include="Sql\ILogger.cs" />
+    <Compile Include="Sql\ISql.cs" />
+    <Compile Include="Sql\LinqParser.cs" />
+    <Compile Include="Sql\MySqlSql.cs" />
+    <Compile Include="Sql\ObjectMapping\Attributes\ColumnAttribute.cs" />
+    <Compile Include="Sql\ObjectMapping\Attributes\EnumStorageTypeAttribute.cs" />
+    <Compile Include="Sql\ObjectMapping\Attributes\FilterColumnAttribute.cs" />
+    <Compile Include="Sql\ObjectMapping\Attributes\TableAttribute.cs" />
+    <Compile Include="Sql\ObjectMapping\ColumnList.cs" />
+    <Compile Include="Sql\ObjectMapping\DbExecuteEngine.cs" />
+    <Compile Include="Sql\ObjectMapping\DbService.cs" />
+    <Compile Include="Sql\ObjectMapping\DbServiceInstance.cs" />
+    <Compile Include="Sql\ObjectMapping\Exceptions.cs" />
+    <Compile Include="Sql\ObjectMapping\FilterExtension.cs" />
+    <Compile Include="Sql\ObjectMapping\MetaData\ColumnMetaData.cs" />
+    <Compile Include="Sql\ObjectMapping\MetaData\MetaDataCacheManager.cs" />
+    <Compile Include="Sql\ObjectMapping\MetaData\PropertyMetaData.cs" />
+    <Compile Include="Sql\ObjectMapping\MetaData\TableMetaData.cs" />
+    <Compile Include="Sql\ObjectMapping\PageInfo.cs" />
+    <Compile Include="Sql\ObjectMapping\SqlDialect.cs" />
+    <Compile Include="Sql\OracleSql.cs" />
+    <Compile Include="Sql\SqlHelper.cs" />
+    <Compile Include="Sql\SqlManager.cs" />
+    <Compile Include="Sql\SqlMap.cs" />
+    <Compile Include="Sql\SqlReservedKeys.cs" />
+    <Compile Include="Sql\SqlServerSql.cs" />
+    <Compile Include="Sql\SqlStringBuilder.cs" />
+    <Compile Include="Sql\TransactionScope.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\JsonUtil.cs" />
+    <Compile Include="Util\CacheUtil.cs" />
+    <Compile Include="Util\ErrorEmailHelper.cs" />
+    <Compile Include="Util\DbUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\DESCryptoUtil.cs" />
+    <Compile Include="Util\EncryptUtil.cs" />
+    <Compile Include="Util\LogUtil.cs" />
+    <Compile Include="Util\MathUtil.cs" />
+    <Compile Include="Util\MoneyUtil.cs" />
+    <Compile Include="Util\OperatorCodeManager.cs" />
+    <Compile Include="Util\OptCodeAndOrderId.cs" />
+    <Compile Include="Util\ParamUtil.cs" />
+    <Compile Include="Util\ReflectUtil.cs" />
+    <Compile Include="Util\RegKeyUtil.cs" />
+    <Compile Include="Security\RSACryptoUtil.cs" />
+    <Compile Include="Util\SendEmailUtil.cs" />
+    <Compile Include="Util\SerializeUtil.cs" />
+    <Compile Include="Util\SortUtil.cs" />
+    <Compile Include="Util\StringUtil.cs" />
+    <Compile Include="Util\ViewStateCompressUtil.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Util\GetPinyinUtil.cs" />
+    <Compile Include="Util\XmlUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="Sql\DbService_Demo.ppt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\AjaxPro.2.dll" />
+    <Content Include="Lib\Ciloci.Flee.dll" />
+    <Content Include="Lib\Common.Logging.dll" />
+    <Content Include="Lib\DotNetTextBox.dll" />
+    <Content Include="Lib\FredCK.FCKeditorV2.dll" />
+    <Content Include="Lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Caching.xml" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Common.xml" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Lib\Microsoft.Practices.EnterpriseLibrary.Data.xml" />
+    <Content Include="Lib\mysql.data.dll" />
+    <Content Include="Lib\Newtonsoft.Json.dll" />
+    <Content Include="Lib\Quartz.dll" />
+    <Content Include="Sql\数据访问注意事项.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
